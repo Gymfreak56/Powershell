@@ -127,22 +127,61 @@ papaya😍️🤤️
 
 ```
 
-## 
+## Functions
 ```powershell
 
+function <name> {
+	param(
+		[switch]
+		<param variable>
+	)
 
+}
+
+function do-switch {
+	param(
+		[switch]
+		$doswitch
+	)
+	
+	if ($doswitch) {
+		"Switch is on"
+	}
+	else {
+		"Switch is off"
+	}
+}
+
+function mandatory {
+	param(
+		[parameter(mandatory=$True)]
+		$name
+	)
+	"your name is $name"
+}
+[math]::floor == #of whole cakes you can buy
+
+```
+## cmdletbinding
+```powershell
+
+treat a function like a cmdlet
 
 ```
 ## 
 ```powershell
 
-
-
-```
-## 
-```powershell
-
-
+function bare-bones {
+	Begin {
+		<code(EX. Variables)>
+	}
+	Process {
+		<code(EX. What you want to happen)(If passed an array it will iterate through the array)>
+	}
+	End {
+		<code(EX. Obtain output)>
+	}
+}
 
 ```
 ## 
